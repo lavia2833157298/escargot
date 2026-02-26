@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>女性历史爱好者个人成长知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#EC4899',
+                        accent: '#F472B6',
+                        light: '#FDF2F8',
+                        dark: '#374151'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-all;
+            }
+            .btn-secondary {
+                @apply bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary/90 transition-all;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-book text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-dark">女性历史知识库</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-dark hover:text-primary transition-colors">首页</a>
+                <a href="#growth" class="text-dark hover:text-primary transition-colors">女性成长</a>
+                <a href="#history" class="text-dark hover:text-primary transition-colors">历史典籍</a>
+                <a href="#cultural" class="text-dark hover:text-primary transition-colors">文物鉴赏</a>
+                <a href="#media" class="text-dark hover:text-primary transition-colors">影视清单</a>
+                <a href="#interview" class="text-dark hover:text-primary transition-colors">记录访谈</a>
+                <a href="#masterclass" class="text-dark hover:text-primary transition-colors">大师课</a>
+                <a href="#tools" class="text-dark hover:text-primary transition-colors">实用工具</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-dark focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#home" class="text-dark hover:text-primary py-2 transition-colors">首页</a>
+                <a href="#growth" class="text-dark hover:text-primary py-2 transition-colors">女性成长</a>
+                <a href="#history" class="text-dark hover:text-primary py-2 transition-colors">历史典籍</a>
+                <a href="#cultural" class="text-dark hover:text-primary py-2 transition-colors">文物鉴赏</a>
+                <a href="#media" class="text-dark hover:text-primary py-2 transition-colors">影视清单</a>
+                <a href="#interview" class="text-dark hover:text-primary py-2 transition-colors">记录访谈</a>
+                <a href="#masterclass" class="text-dark hover:text-primary py-2 transition-colors">大师课</a>
+                <a href="#tools" class="text-dark hover:text-primary py-2 transition-colors">实用工具</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <section id="home" class="pt-24 pb-16 bg-gradient-to-br from-light to-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">
+                        女性历史爱好者的<br>
+                        <span class="text-primary">个人成长知识库</span>
+                    </h1>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        探索女性在历史中的角色，汲取智慧，助力个人成长。
+                        这里汇集了丰富的历史资源、文化遗产和成长工具。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#growth" class="btn-primary">开始探索</a>
+                        <a href="#about" class="btn-secondary">了解更多</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=illustration%20of%20women%20history%20scholar%20reading%20ancient%20books%20in%20a%20library%20filled%20with%20historical%20artifacts%2C%20warm%20lighting%2C%20inspiring%20atmosphere&image_size=landscape_16_9" alt="女性历史研究者" class="rounded-lg shadow-xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">关于知识库</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-lightbulb-o"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-dark">使命</h3>
+                    <p class="text-gray-600">
+                        为女性历史爱好者提供一个全面的知识平台，促进个人成长和历史认知，
+                        弘扬女性在历史中的贡献和价值。
+                    </p>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-dark">内容</h3>
+                    <p class="text-gray-600">
+                        涵盖女性成长、历史典籍、文物鉴赏、影视清单、记录访谈、
+                        顶尖大师课和实用工具等多个领域，满足不同层次的学习需求。
+                    </p>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <div class="text-primary text-3xl mb-4">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-dark">社区</h3>
+                    <p class="text-gray-600">
+                        打造一个积极向上的学习社区，鼓励女性历史爱好者交流分享，
+                        共同成长，建立深厚的友谊和专业联系。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 女性成长库 -->
+    <section id="growth" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">女性成长库</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=women%20empowerment%20book%20collection%2C%20inspiring%20quotes%2C%20warm%20colors%2C%20cozy%20reading%20nook&image_size=square" alt="女性成长书籍" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">成长书籍</h3>
+                    <p class="text-gray-600 mb-4">精选女性成长相关书籍，涵盖自我认知、职业发展、人际关系等多个方面。</p>
+                    <a href="growth.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=women%20leadership%20workshop%2C%20professional%20women%20discussing%20ideas%2C%20modern%20office%20setting&image_size=square" alt="女性领导力" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">领导力培养</h3>
+                    <p class="text-gray-600 mb-4">探索女性领导力的发展路径，提供实用的领导技巧和案例分析。</p>
+                    <a href="growth.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=women%20historical%20figures%20timeline%2C%20influential%20women%20throughout%20history%2C%20educational%20infographic&image_size=square" alt="历史女性榜样" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">历史女性榜样</h3>
+                    <p class="text-gray-600 mb-4">了解历史上杰出女性的故事，从中汲取力量和智慧，为个人成长提供指引。</p>
+                    <a href="growth.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 历史典籍库 -->
+    <section id="history" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">历史典籍库</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20chinese%20books%20scrolls%2C%20traditional%20binding%2C%20historical%20texts%2C%20scholarly%20atmosphere&image_size=square" alt="古典文献" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">古典文献</h3>
+                    <p class="text-gray-600 mb-4">收录中国古代关于女性的经典文献，包括女诫、女训等传统著作。</p>
+                    <a href="history.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=world%20history%20books%20collection%2C%20multicultural%20historical%20texts%2C%20global%20perspective&image_size=square" alt="世界史著" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">世界史著</h3>
+                    <p class="text-gray-600 mb-4">介绍世界范围内关于女性历史的重要著作，拓宽国际视野。</p>
+                    <a href="history.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=historical%20research%20papers%2C%20academic%20journals%2C%20scholarly%20articles%20on%20women%27s%20history&image_size=square" alt="学术研究" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">学术研究</h3>
+                    <p class="text-gray-600 mb-4">收集关于女性历史的学术研究成果，提供深度思考的资源。</p>
+                    <a href="history.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文物鉴赏库 -->
+    <section id="cultural" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">文物鉴赏库</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20chinese%20women%27s%20ceramics%2C%20traditional%20pottery%2C%20cultural%20artifacts%2C%20museum%20quality&image_size=square" alt="陶瓷艺术" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">陶瓷艺术</h3>
+                    <p class="text-gray-600 mb-4">欣赏古代女性相关的陶瓷作品，了解其艺术价值和历史意义。</p>
+                    <a href="cultural.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20jade%20jewelry%2C%20traditional%20Chinese%20ornaments%2C%20women%27s%20accessories%2C%20luxury%20artifacts&image_size=square" alt="服饰珠宝" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">服饰珠宝</h3>
+                    <p class="text-gray-600 mb-4">探索历史上女性的服饰和珠宝，了解不同时代的审美和工艺。</p>
+                    <a href="cultural.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20paintings%20of%20women%2C%20traditional%20Chinese%20art%2C%20classical%20portraits%2C%20artistic%20masterpieces&image_size=square" alt="绘画艺术" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">绘画艺术</h3>
+                    <p class="text-gray-600 mb-4">品鉴以女性为主题的古代绘画作品，感受艺术中的女性形象。</p>
+                    <a href="cultural.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 影视清单库 -->
+    <section id="media" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">影视清单库</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=historical%20drama%20movie%20poster%2C%20women%20protagonist%2C%20epic%20historical%20setting%2C%20cinematic%20quality&image_size=square" alt="历史剧作" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">历史剧作</h3>
+                    <p class="text-gray-600 mb-4">推荐以女性为主角的历史题材影视剧，重现历史场景和人物。</p>
+                    <a href="media.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=documentary%20film%20about%20women%27s%20history%2C%20educational%20content%2C%20archival%20footage%2C%20professional%20production&image_size=square" alt="纪录片" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">纪录片</h3>
+                    <p class="text-gray-600 mb-4">精选关于女性历史的纪录片，提供真实的历史视角和深度分析。</p>
+                    <a href="media.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20film%20about%20women%27s%20empowerment%2C%20contemporary%20setting%2C%20inspiring%20storyline%2C%20cinematic%20excellence&image_size=square" alt="现代影视作品" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">现代影视作品</h3>
+                    <p class="text-gray-600 mb-4">推荐现代关于女性成长和历史反思的影视作品，结合当下视角。</p>
+                    <a href="media.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 记录访谈库 -->
+    <section id="interview" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">记录访谈库</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=historian%20interview%2C%20scholar%20discussing%20women%27s%20history%2C%20professional%20setting%2C%20academic%20atmosphere&image_size=square" alt="学者访谈" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">学者访谈</h3>
+                    <p class="text-gray-600 mb-4">收录对女性历史学者的深度访谈，了解他们的研究成果和观点。</p>
+                    <a href="interview.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=oral%20history%20interview%2C%20elderly%20woman%20sharing%20her%20life%20story%2C%20warm%20and%20intimate%20setting&image_size=square" alt="口述历史" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">口述历史</h3>
+                    <p class="text-gray-600 mb-4">整理女性的口述历史资料，保存真实的个人经历和时代记忆。</p>
+                    <a href="interview.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=women%20activist%20interview%2C%20modern%20feminist%20leader%20speaking%2C%20inspirational%20setting%2C%20professional%20photography&image_size=square" alt="当代女性领袖" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">当代女性领袖</h3>
+                    <p class="text-gray-600 mb-4">访谈当代女性领袖和榜样，分享她们的成长经历和成功经验。</p>
+                    <a href="interview.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 顶尖大师课 -->
+    <section id="masterclass" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">顶尖大师课</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=history%20professor%20teaching%20class%2C%20university%20lecture%20hall%2C%20academic%20setting%2C%20engaging%20presentation&image_size=square" alt="历史学术课" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">历史学术课</h3>
+                    <p class="text-gray-600 mb-4">由知名历史学者开设的专业课程，深入探讨女性历史的各个方面。</p>
+                    <a href="masterclass.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=women%27s%20studies%20workshop%2C%20interactive%20learning%20session%2C%20small%20group%20discussion%2C%20collaborative%20environment&image_size=square" alt="女性研究工作坊" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">女性研究工作坊</h3>
+                    <p class="text-gray-600 mb-4">互动式的女性研究工作坊，通过实践活动深化对女性历史的理解。</p>
+                    <a href="masterclass.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=personal%20development%20seminar%2C%20women%20empowerment%20workshop%2C%20inspirational%20speaker%2C%20motivational%20setting&image_size=square" alt="个人成长讲座" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">个人成长讲座</h3>
+                    <p class="text-gray-600 mb-4">结合历史智慧的个人成长讲座，帮助女性实现自我提升和发展。</p>
+                    <a href="masterclass.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 实用工具库 -->
+    <section id="tools" class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">实用工具库</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=research%20tools%20for%20historians%2C%20digital%20archives%2C%20historical%20documents%2C%20scholarly%20resources&image_size=square" alt="研究工具" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">研究工具</h3>
+                    <p class="text-gray-600 mb-4">提供历史研究相关的工具和资源，帮助女性历史爱好者开展深入研究。</p>
+                    <a href="tools.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=personal%20growth%20planner%2C%20goal%20setting%20tools%2C%20self-improvement%20resources%2C%20organizational%20system&image_size=square" alt="个人成长工具" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">个人成长工具</h3>
+                    <p class="text-gray-600 mb-4">设计实用的个人成长工具，包括目标设定、时间管理和自我评估等。</p>
+                    <a href="tools.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=community%20building%20tools%2C%20networking%20resources%2C%20connection%20platforms%2C%20collaborative%20environment&image_size=square" alt="社区建设工具" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">社区建设工具</h3>
+                    <p class="text-gray-600 mb-4">提供社区建设和 networking 的工具，促进女性历史爱好者之间的交流与合作。</p>
+                    <a href="tools.html" class="text-primary hover:underline flex items-center">
+                        查看更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-4">订阅更新</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                订阅我们的邮件列表，获取最新的女性历史研究成果、成长资源和活动信息。
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="请输入您的邮箱" class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button class="btn-primary whitespace-nowrap">订阅</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-book text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">女性历史知识库</span>
+                    </div>
+                    <p class="text-gray-400">
+                        为女性历史爱好者提供全面的知识资源，促进个人成长和历史认知。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="#growth" class="text-gray-400 hover:text-primary transition-colors">女性成长</a></li>
+                        <li><a href="#history" class="text-gray-400 hover:text-primary transition-colors">历史典籍</a></li>
+                        <li><a href="#cultural" class="text-gray-400 hover:text-primary transition-colors">文物鉴赏</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">更多资源</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#media" class="text-gray-400 hover:text-primary transition-colors">影视清单</a></li>
+                        <li><a href="#interview" class="text-gray-400 hover:text-primary transition-colors">记录访谈</a></li>
+                        <li><a href="#masterclass" class="text-gray-400 hover:text-primary transition-colors">大师课</a></li>
+                        <li><a href="#tools" class="text-gray-400 hover:text-primary transition-colors">实用工具</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">contact@womenhistory.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                        <li class="flex items-center"><i class="fa fa-map-marker mr-2"></i> <span class="text-gray-400">北京市海淀区</span></li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-zhihu text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-youtube-play text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 女性历史知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // 关闭移动端菜单
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+                nav.classList.remove('bg-white');
+            } else {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史典籍库 - 女性历史爱好者个人成长知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#EC4899',
+                        accent: '#F472B6',
+                        light: '#FDF2F8',
+                        dark: '#374151'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-all;
+            }
+            .btn-secondary {
+                @apply bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary/90 transition-all;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-book text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-dark">女性历史知识库</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary transition-colors">女性成长</a>
+                <a href="history.html" class="text-primary font-medium">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary transition-colors">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary transition-colors">实用工具</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-dark focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="index.html" class="text-dark hover:text-primary py-2 transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary py-2 transition-colors">女性成长</a>
+                <a href="history.html" class="text-primary font-medium py-2 transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary py-2 transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary py-2 transition-colors">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary py-2 transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary py-2 transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary py-2 transition-colors">实用工具</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-light">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">历史典籍库</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                探索历史上关于女性的经典文献，从中汲取智慧和力量。
+                这里汇集了古今中外的历史典籍，为女性历史爱好者提供丰富的学习资源。
+            </p>
+        </div>
+    </header>
+
+    <!-- 古典文献 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">古典文献</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20book%20scroll%20with%20traditional%20binding%2C%20classical%20text%2C%20scholarly%20appearance%2C%20historical%20document&image_size=square" alt="《女诫》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《女诫》</h3>
+                    <p class="text-gray-600 mb-4">作者：班昭<br>朝代：东汉<br>成书年份：约110年</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        《女诫》是中国古代第一部女性教育专著，由东汉才女班昭撰写。全书分为七篇，论述了女性的道德规范和行为准则，对后世女性教育产生了深远影响。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20book%20with%20traditional%20cover%2C%20classical%20literature%2C%20historical%20document%2C%20scholarly%20appearance&image_size=square" alt="《列女传》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《列女传》</h3>
+                    <p class="text-gray-600 mb-4">作者：刘向<br>朝代：西汉<br>成书年份：约公元前1世纪</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        《列女传》是中国历史上第一部女性传记专集，收录了从远古到西汉的105位女性的事迹，分为母仪、贤明、仁智、贞顺、节义、辩通、孽嬖七类。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20manuscript%20scroll%2C%20classical%20text%2C%20historical%20document%2C%20scholarly%20appearance&image_size=square" alt="《女论语》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《女论语》</h3>
+                    <p class="text-gray-600 mb-4">作者：宋若昭<br>朝代：唐朝<br>成书年份：约820年</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        《女论语》是唐朝女学者宋若昭撰写的女性教育著作，模仿《论语》的体例，用四言韵文形式阐述女性的行为规范和道德准则。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多古典文献</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 世界史著 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">世界史著</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=world%20history%20book%20about%20women%2C%20scholarly%20appearance%2C%20modern%20design%2C%20professional%20publishing&image_size=square" alt="《女性的历史》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《女性的历史》</h3>
+                    <p class="text-gray-600 mb-4">作者：罗莎琳德·迈尔斯<br>出版社：企鹅出版社<br>出版年份：2018</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书从全球视角讲述了女性在历史中的角色和地位变迁，涵盖了从古代到现代的女性历史，探讨了女性在政治、经济、文化等各个领域的贡献。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=feminist%20history%20book%2C%20scholarly%20appearance%2C%20modern%20design%2C%20professional%20publishing&image_size=square" alt="《女性与权力》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《女性与权力》</h3>
+                    <p class="text-gray-600 mb-4">作者：玛丽·比尔德<br>出版社：Profile Books<br>出版年份：2017</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书从古典学角度探讨了女性与权力的关系，分析了从古至今女性在公共领域发声的困难，以及权力结构对女性的排斥机制。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=women%27s%20history%20book%20global%20perspective%2C%20scholarly%20appearance%2C%20modern%20design%2C%20professional%20publishing&image_size=square" alt="《全球女性史》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《全球女性史》</h3>
+                    <p class="text-gray-600 mb-4">作者：邦尼·史密斯<br>出版社：剑桥大学出版社<br>出版年份：2015</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书采用全球史视角，讲述了世界各地女性的历史经历，探讨了性别关系的演变、女性的反抗与斗争，以及女性在不同文化中的地位变化。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多世界史著</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学术研究 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">学术研究</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=academic%20research%20paper%20on%20women%27s%20history%2C%20scholarly%20journal%20article%2C%20professional%20appearance%2C%20academic%20setting&image_size=square" alt="《中国古代女性文学研究》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《中国古代女性文学研究》</h3>
+                    <p class="text-gray-600 mb-4">作者：陈宏谋<br>出版社：中华书局<br>出版年份：2019</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书系统研究了中国古代女性文学的发展历程，分析了不同时期女性作家的创作特点和文学成就，展现了女性在文学史上的重要地位。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=academic%20book%20on%20feminist%20history%2C%20scholarly%20appearance%2C%20professional%20publishing%2C%20academic%20setting&image_size=square" alt="《女性主义历史学》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《女性主义历史学》</h3>
+                    <p class="text-gray-600 mb-4">作者：琼·斯科特<br>出版社：北京大学出版社<br>出版年份：2017</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书介绍了女性主义历史学的理论和方法，探讨了如何从性别视角重新解读历史，以及女性主义对历史学发展的影响。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=academic%20research%20book%20on%20women%27s%20social%20history%2C%20scholarly%20appearance%2C%20professional%20publishing%2C%20academic%20setting&image_size=square" alt="《近代中国女性社会地位变迁》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《近代中国女性社会地位变迁》</h3>
+                    <p class="text-gray-600 mb-4">作者：李银河<br>出版社：人民出版社<br>出版年份：2020</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书研究了近代中国社会变迁中女性地位的变化，分析了政治、经济、文化等因素对女性生活的影响，展现了女性争取平等权利的历史进程。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多学术研究</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 历史时期分类 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">历史时期分类</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-university"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">古代</h3>
+                    <p class="text-gray-600 mt-2">远古至1840年</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">近代</h3>
+                    <p class="text-gray-600 mt-2">1840年至1949年</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-history"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">现代</h3>
+                    <p class="text-gray-600 mt-2">1949年至2000年</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-lightbulb-o"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">当代</h3>
+                    <p class="text-gray-600 mt-2">2000年至今</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-4">订阅更新</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                订阅我们的邮件列表，获取最新的历史研究成果、典籍解读和学术动态。
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="请输入您的邮箱" class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button class="btn-primary whitespace-nowrap">订阅</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-book text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">女性历史知识库</span>
+                    </div>
+                    <p class="text-gray-400">
+                        为女性历史爱好者提供全面的知识资源，促进个人成长和历史认知。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="growth.html" class="text-gray-400 hover:text-primary transition-colors">女性成长</a></li>
+                        <li><a href="history.html" class="text-primary hover:text-primary transition-colors">历史典籍</a></li>
+                        <li><a href="cultural.html" class="text-gray-400 hover:text-primary transition-colors">文物鉴赏</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">更多资源</h3>
+                    <ul class="space-y-2">
+                        <li><a href="media.html" class="text-gray-400 hover:text-primary transition-colors">影视清单</a></li>
+                        <li><a href="interview.html" class="text-gray-400 hover:text-primary transition-colors">记录访谈</a></li>
+                        <li><a href="masterclass.html" class="text-gray-400 hover:text-primary transition-colors">大师课</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-primary transition-colors">实用工具</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">contact@womenhistory.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                        <li class="flex items-center"><i class="fa fa-map-marker mr-2"></i> <span class="text-gray-400">北京市海淀区</span></li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-zhihu text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-youtube-play text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 女性历史知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+                nav.classList.remove('bg-white');
+            } else {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+</html>

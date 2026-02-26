@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>女性成长库 - 女性历史爱好者个人成长知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#EC4899',
+                        accent: '#F472B6',
+                        light: '#FDF2F8',
+                        dark: '#374151'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-all;
+            }
+            .btn-secondary {
+                @apply bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary/90 transition-all;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-book text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-dark">女性历史知识库</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary transition-colors">首页</a>
+                <a href="growth.html" class="text-primary font-medium">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary transition-colors">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary transition-colors">实用工具</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-dark focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="index.html" class="text-dark hover:text-primary py-2 transition-colors">首页</a>
+                <a href="growth.html" class="text-primary font-medium py-2 transition-colors">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary py-2 transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary py-2 transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary py-2 transition-colors">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary py-2 transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary py-2 transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary py-2 transition-colors">实用工具</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-light">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">女性成长库</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                探索女性成长的智慧与力量，从历史中汲取营养，在现代中寻找方向。
+                这里汇集了丰富的成长资源，助力女性实现自我价值。
+            </p>
+        </div>
+    </header>
+
+    <!-- 成长书籍 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">成长书籍</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=book%20cover%20of%20women%20empowerment%20book%2C%20inspiring%20design%2C%20modern%20typography%2C%20professional%20publishing&image_size=square" alt="《女性的力量》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《女性的力量》</h3>
+                    <p class="text-gray-600 mb-4">作者：玛丽·比尔德<br>出版社：中信出版社<br>出版年份：2020</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书从历史角度探讨女性的地位和权力，分析了女性在各个时代面临的挑战和机遇，为现代女性提供了宝贵的启示。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=book%20cover%20of%20self-help%20book%20for%20women%2C%20personal%20growth%20theme%2C%20warm%20colors%2C%20professional%20design&image_size=square" alt="《向前一步》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《向前一步》</h3>
+                    <p class="text-gray-600 mb-4">作者：谢丽尔·桑德伯格<br>出版社：中信出版社<br>出版年份：2013</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书鼓励女性勇敢地追求自己的职业目标，打破职场中的性别障碍，实现自我价值的最大化。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=book%20cover%20of%20historical%20women%20biography%2C%20inspirational%20stories%2C%20timeless%20design%2C%20scholarly%20appearance&image_size=square" alt="《历史上的女性》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《历史上的女性》</h3>
+                    <p class="text-gray-600 mb-4">作者：罗莎琳德·迈尔斯<br>出版社：商务印书馆<br>出版年份：2018</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书讲述了历史上杰出女性的故事，从古代到现代，展现了女性在各个领域的卓越成就和不屈精神。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=book%20cover%20of%20female%20leadership%20book%2C%20business%20theme%2C%20confident%20design%2C%20professional%20appearance&image_size=square" alt="《女性领导力》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《女性领导力》</h3>
+                    <p class="text-gray-600 mb-4">作者：艾伦·罗森伯格<br>出版社：机械工业出版社<br>出版年份：2021</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本书基于大量研究和案例，分析了女性领导的特点和优势，为女性管理者提供了实用的领导技巧和策略。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多书籍</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 领导力培养 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">领导力培养</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-primary text-4xl mb-4 text-center">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-dark text-center">团队管理</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>建立高效协作的团队文化</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>有效的沟通技巧和反馈机制</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>冲突管理与团队凝聚力建设</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>授权与信任的艺术</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-primary text-4xl mb-4 text-center">
+                        <i class="fa fa-line-chart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-dark text-center">决策能力</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>分析问题与制定策略的方法</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>风险评估与管理技巧</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>直觉与数据结合的决策模式</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>决策后的执行与调整</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-primary text-4xl mb-4 text-center">
+                        <i class="fa fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-dark text-center">影响力</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>有效的演讲与表达技巧</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>建立个人品牌与专业形象</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>网络构建与关系管理</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-check-circle text-primary mt-1 mr-2"></i>
+                            <span>谈判技巧与利益平衡</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 历史女性榜样 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">历史女性榜样</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=portrait%20of%20ancient%20Chinese%20female%20poet%2C%20traditional%20clothing%2C%20scholarly%20appearance%2C%20inspiring%20expression&image_size=square" alt="李清照" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">李清照 (1084-1155)</h3>
+                    <p class="text-gray-600 mb-4">宋代著名女词人，婉约派代表人物。她的词作情感细腻，语言优美，对后世文学产生了深远影响。</p>
+                    <p class="text-gray-600 mb-4">
+                        李清照的一生充满坎坷，但她始终保持着对文学的热爱和对生活的执着。她的作品不仅展现了女性的情感世界，也反映了时代的变迁，成为中国文学史上的瑰宝。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=portrait%20of%20ancient%20Egyptian%20female%20pharaoh%2C%20regal%20appearance%2C%20ancient%20costume%2C%20powerful%20presence&image_size=square" alt="哈特谢普苏特" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">哈特谢普苏特 (约前1508-前1458)</h3>
+                    <p class="text-gray-600 mb-4">古埃及第十八王朝的女法老，是古埃及历史上最成功的女性统治者之一。</p>
+                    <p class="text-gray-600 mb-4">
+                        哈特谢普苏特在位期间，埃及繁荣昌盛，她开展了大规模的建筑工程和贸易远征，为埃及的发展做出了重要贡献。她打破了传统性别限制，以法老的身份统治埃及长达22年。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=portrait%20of%2019th%20century%20female%20scientist%2C%20Marie%20Curie%2C%20professional%20appearance%2C%20laboratory%20setting%2C%20inspirational%20figure&image_size=square" alt="玛丽·居里" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">玛丽·居里 (1867-1934)</h3>
+                    <p class="text-gray-600 mb-4">波兰裔法国物理学家、化学家，首位获得诺贝尔奖的女性，也是唯一一位在两个不同领域获得诺贝尔奖的科学家。</p>
+                    <p class="text-gray-600 mb-4">
+                        玛丽·居里的研究为放射性理论奠定了基础，她的发现对医学和科学发展产生了深远影响。她克服了性别歧视和种种困难，成为科学史上的传奇人物。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        了解更多 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多榜样</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成长工具 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">成长工具</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-primary text-4xl mb-4 text-center">
+                        <i class="fa fa-calendar"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-dark text-center">目标设定工具</h3>
+                    <p class="text-gray-600 mb-4 text-center">
+                        帮助你制定清晰、可实现的个人成长目标，追踪进度并保持动力。
+                    </p>
+                    <a href="#" class="btn-primary block text-center">开始使用</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-primary text-4xl mb-4 text-center">
+                        <i class="fa fa-refresh"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-dark text-center">习惯养成工具</h3>
+                    <p class="text-gray-600 mb-4 text-center">
+                        培养积极的生活和工作习惯，通过每日打卡和数据追踪实现持续改进。
+                    </p>
+                    <a href="#" class="btn-primary block text-center">开始使用</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <div class="text-primary text-4xl mb-4 text-center">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-dark text-center">自我反思工具</h3>
+                    <p class="text-gray-600 mb-4 text-center">
+                        通过结构化的问题和练习，帮助你深入了解自己，发现成长机会。
+                    </p>
+                    <a href="#" class="btn-primary block text-center">开始使用</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-4">订阅成长资讯</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                订阅我们的邮件列表，获取最新的女性成长资源、书籍推荐和活动信息。
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="请输入您的邮箱" class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button class="btn-primary whitespace-nowrap">订阅</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-book text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">女性历史知识库</span>
+                    </div>
+                    <p class="text-gray-400">
+                        为女性历史爱好者提供全面的知识资源，促进个人成长和历史认知。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="growth.html" class="text-primary hover:text-primary transition-colors">女性成长</a></li>
+                        <li><a href="history.html" class="text-gray-400 hover:text-primary transition-colors">历史典籍</a></li>
+                        <li><a href="cultural.html" class="text-gray-400 hover:text-primary transition-colors">文物鉴赏</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">更多资源</h3>
+                    <ul class="space-y-2">
+                        <li><a href="media.html" class="text-gray-400 hover:text-primary transition-colors">影视清单</a></li>
+                        <li><a href="interview.html" class="text-gray-400 hover:text-primary transition-colors">记录访谈</a></li>
+                        <li><a href="masterclass.html" class="text-gray-400 hover:text-primary transition-colors">大师课</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-primary transition-colors">实用工具</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">contact@womenhistory.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                        <li class="flex items-center"><i class="fa fa-map-marker mr-2"></i> <span class="text-gray-400">北京市海淀区</span></li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-zhihu text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-youtube-play text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 女性历史知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+                nav.classList.remove('bg-white');
+            } else {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+</html>

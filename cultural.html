@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文物鉴赏库 - 女性历史爱好者个人成长知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#EC4899',
+                        accent: '#F472B6',
+                        light: '#FDF2F8',
+                        dark: '#374151'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-all;
+            }
+            .btn-secondary {
+                @apply bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary/90 transition-all;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-book text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-dark">女性历史知识库</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary transition-colors">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-primary font-medium">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary transition-colors">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary transition-colors">实用工具</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-dark focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="index.html" class="text-dark hover:text-primary py-2 transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary py-2 transition-colors">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary py-2 transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-primary font-medium py-2 transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary py-2 transition-colors">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary py-2 transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary py-2 transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary py-2 transition-colors">实用工具</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-light">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">文物鉴赏库</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                探索与女性相关的历史文物和艺术品，感受不同时代的审美和工艺。
+                这里汇集了丰富的文物资料，为女性历史爱好者提供独特的视觉体验。
+            </p>
+        </div>
+    </header>
+
+    <!-- 陶瓷艺术 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">陶瓷艺术</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20porcelain%20vase%20with%20feminine%20design%2C%20traditional%20patterns%2C%20museum%20quality%2C%20cultural%20artifact&image_size=square" alt="宋 定窑白釉刻花牡丹纹梅瓶" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">宋 定窑白釉刻花牡丹纹梅瓶</h3>
+                    <p class="text-gray-600 mb-4">时代：宋代<br>材质：白瓷<br>收藏：故宫博物院</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        此瓶造型优美，胎质细腻，釉色洁白如玉，瓶身刻有牡丹花纹，线条流畅自然。牡丹象征富贵吉祥，是宋代女性喜爱的装饰纹样。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20ceramic%20bowl%20with%20feminine%20decorations%2C%20colorful%20glaze%2C%20traditional%20craftsmanship%2C%20cultural%20relic&image_size=square" alt="清 粉彩花卉纹碗" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">清 粉彩花卉纹碗</h3>
+                    <p class="text-gray-600 mb-4">时代：清代<br>材质：粉彩瓷<br>收藏：上海博物馆</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        此碗采用粉彩工艺，碗身绘有精美的花卉纹样，色彩艳丽，层次分明。粉彩是清代女性喜爱的瓷器品种，以其柔和的色彩和细腻的绘画著称。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20ceramic%20figurine%20of%20woman%2C%20traditional%20craftsmanship%2C%20cultural%20artifact%2C%20museum%20exhibit&image_size=square" alt="唐 三彩陶女俑" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">唐 三彩陶女俑</h3>
+                    <p class="text-gray-600 mb-4">时代：唐代<br>材质：三彩陶<br>收藏：陕西历史博物馆</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        此俑塑造了一位唐代女性的形象，体态丰腴，衣饰华丽，面部表情生动。唐三彩陶艺精湛，色彩斑斓，是唐代女性生活的真实写照。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多陶瓷艺术</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服饰珠宝 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">服饰珠宝</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20jade%20jewelry%2C%20necklace%20with%20jade%20pendants%2C%20luxury%20artifact%2C%20cultural%20relic&image_size=square" alt="明 翡翠朝珠" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">明 翡翠朝珠</h3>
+                    <p class="text-gray-600 mb-4">时代：明代<br>材质：翡翠、珍珠<br>收藏：故宫博物院</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        此朝珠由108颗翡翠珠子串成，间以珍珠相隔，工艺精湛，色泽温润。朝珠是明代贵族女性的重要饰品，象征身份和地位。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20silk%20dress%2C%20traditional%20embroidery%2C%20feminine%20costume%2C%20cultural%20artifact&image_size=square" alt="清 刺绣牡丹纹旗袍" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">清 刺绣牡丹纹旗袍</h3>
+                    <p class="text-gray-600 mb-4">时代：清代<br>材质：丝绸、金线<br>收藏：南京博物院</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        此旗袍采用上等丝绸制作，周身绣有牡丹花纹，针法细腻，色彩艳丽。旗袍是清代女性的传统服饰，展现了中国传统刺绣工艺的高超水平。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20gold%20hairpin%20with%20pearl%20decoration%2C%20feminine%20accessory%2C%20luxury%20artifact%2C%20cultural%20relic&image_size=square" alt="宋 金镶珍珠簪" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">宋 金镶珍珠簪</h3>
+                    <p class="text-gray-600 mb-4">时代：宋代<br>材质：黄金、珍珠<br>收藏：浙江省博物馆</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        此簪以黄金为主体，簪头镶嵌珍珠和宝石，工艺精美，造型典雅。簪是宋代女性的重要头饰，象征着女性的身份和品味。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多服饰珠宝</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 绘画艺术 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">绘画艺术</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20painting%20of%20woman%2C%20traditional%20ink%20painting%2C%20classical%20portrait%2C%20artistic%20masterpiece&image_size=square" alt="唐 周昉《簪花仕女图》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">唐 周昉《簪花仕女图》</h3>
+                    <p class="text-gray-600 mb-4">时代：唐代<br>材质：绢本设色<br>收藏：辽宁省博物馆</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        此图描绘了唐代贵族妇女的日常生活场景，画面中几位仕女身着华丽的服装，头戴簪花，体态丰腴，神情悠闲。作品线条流畅，色彩艳丽，是唐代人物画的代表作。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20painting%20of%20women%20in%20garden%2C%20traditional%20landscape%2C%20classical%20art%2C%20artistic%20masterpiece&image_size=square" alt="宋 张萱《虢国夫人游春图》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">宋 张萱《虢国夫人游春图》</h3>
+                    <p class="text-gray-600 mb-4">时代：宋代摹本<br>材质：绢本设色<br>收藏：故宫博物院</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        此图描绘了唐玄宗时期虢国夫人及其眷属春日出游的场景，画面中女性形象丰满艳丽，衣饰华丽，车马雍容。作品构图疏密有致，色彩明快，展现了唐代贵族女性的生活风貌。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20Chinese%20painting%20of%20woman%20playing%20musical%20instrument%2C%20traditional%20art%2C%20classical%20portrait%2C%20artistic%20masterpiece&image_size=square" alt="明 仇英《汉宫春晓图》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">明 仇英《汉宫春晓图》</h3>
+                    <p class="text-gray-600 mb-4">时代：明代<br>材质：绢本设色<br>收藏：台北故宫博物院</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        此图描绘了汉代宫廷中女性的日常生活场景，画面中人物众多，活动丰富，有弹琴、下棋、读书、赏花等。作品构图繁复而有序，色彩鲜艳，是明代工笔重彩人物画的代表作。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多绘画艺术</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 文物分类 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">文物分类</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-flask"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">陶瓷器</h3>
+                    <p class="text-gray-600 mt-2">花瓶、碗碟、俑像</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-diamond"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">玉石器</h3>
+                    <p class="text-gray-600 mt-2">首饰、摆件、装饰品</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-paint-brush"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">绘画</h3>
+                    <p class="text-gray-600 mt-2">人物画、仕女图、风俗画</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-scissors"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">服饰</h3>
+                    <p class="text-gray-600 mt-2">服装、首饰、配饰</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-4">订阅更新</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                订阅我们的邮件列表，获取最新的文物鉴赏资讯、展览信息和艺术欣赏指南。
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="请输入您的邮箱" class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button class="btn-primary whitespace-nowrap">订阅</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-book text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">女性历史知识库</span>
+                    </div>
+                    <p class="text-gray-400">
+                        为女性历史爱好者提供全面的知识资源，促进个人成长和历史认知。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="growth.html" class="text-gray-400 hover:text-primary transition-colors">女性成长</a></li>
+                        <li><a href="history.html" class="text-gray-400 hover:text-primary transition-colors">历史典籍</a></li>
+                        <li><a href="cultural.html" class="text-primary hover:text-primary transition-colors">文物鉴赏</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">更多资源</h3>
+                    <ul class="space-y-2">
+                        <li><a href="media.html" class="text-gray-400 hover:text-primary transition-colors">影视清单</a></li>
+                        <li><a href="interview.html" class="text-gray-400 hover:text-primary transition-colors">记录访谈</a></li>
+                        <li><a href="masterclass.html" class="text-gray-400 hover:text-primary transition-colors">大师课</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-primary transition-colors">实用工具</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">contact@womenhistory.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                        <li class="flex items-center"><i class="fa fa-map-marker mr-2"></i> <span class="text-gray-400">北京市海淀区</span></li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-zhihu text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-youtube-play text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 女性历史知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+                nav.classList.remove('bg-white');
+            } else {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影视清单库 - 女性历史爱好者个人成长知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#EC4899',
+                        accent: '#F472B6',
+                        light: '#FDF2F8',
+                        dark: '#374151'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-all;
+            }
+            .btn-secondary {
+                @apply bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary/90 transition-all;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-book text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-dark">女性历史知识库</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary transition-colors">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-primary font-medium">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary transition-colors">实用工具</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-dark focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="index.html" class="text-dark hover:text-primary py-2 transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary py-2 transition-colors">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary py-2 transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary py-2 transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-primary font-medium py-2 transition-colors">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary py-2 transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary py-2 transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary py-2 transition-colors">实用工具</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-light">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">影视清单库</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                探索与女性历史相关的影视作品，从视觉艺术中感受女性的力量与智慧。
+                这里汇集了丰富的影视资源，为女性历史爱好者提供独特的观影体验。
+            </p>
+        </div>
+    </header>
+
+    <!-- 历史剧作 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">历史剧作</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=historical%20drama%20movie%20poster%20about%20ancient%20Chinese%20women%2C%20epic%20setting%2C%20cinematic%20quality%2C%20inspiring%20story&image_size=square" alt="《大明风华》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《大明风华》</h3>
+                    <p class="text-gray-600 mb-4">导演：张挺<br>主演：汤唯、朱亚文<br>年份：2019<br>评分：7.2</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        该剧以明朝永乐年间为背景，讲述了孙若微从一名民间女子成长为皇后的传奇故事。剧中展现了女性在宫廷中的智慧与勇气，以及她们对历史进程的影响。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=historical%20drama%20tv%20series%20poster%20about%20women%20in%20ancient%20Korea%2C%20traditional%20setting%2C%20emotional%20story%2C%20cinematic%20quality&image_size=square" alt="《大长今》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《大长今》</h3>
+                    <p class="text-gray-600 mb-4">导演：李炳勋<br>主演：李英爱、池珍熙<br>年份：2003<br>评分：8.6</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        该剧讲述了朝鲜王朝时期，徐长今从一名宫女成长为御膳房最高尚宫，最终成为朝鲜历史上首位女性御医的故事。剧中展现了女性通过不懈努力实现自我价值的精神。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=historical%20epic%20movie%20poster%20about%20Cleopatra%2C%20ancient%20Egypt%2C%20grand%20setting%2C%20powerful%20female%20leader%2C%20cinematic%20quality&image_size=square" alt="《埃及艳后》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《埃及艳后》</h3>
+                    <p class="text-gray-600 mb-4">导演：约瑟夫·L·曼凯维奇<br>主演：伊丽莎白·泰勒、理查德·伯顿<br>年份：1963<br>评分：7.8</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        该剧讲述了古埃及托勒密王朝最后一位女王克利奥帕特拉七世的传奇一生，展现了她作为女性统治者的智慧、魅力和政治手腕，以及她与凯撒、安东尼的情感纠葛。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多历史剧作</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 纪录片 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">纪录片</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=documentary%20film%20poster%20about%20women%27s%20history%2C%20educational%20content%2C%20archival%20footage%2C%20professional%20production&image_size=square" alt="《女性的历史》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《女性的历史》</h3>
+                    <p class="text-gray-600 mb-4">导演：露西·沃斯利<br>年份：2018<br>时长：3集×60分钟<br>评分：9.1</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        该纪录片以全球视角讲述了女性在历史中的角色和地位变迁，通过丰富的历史资料和专家解读，展现了女性在政治、经济、文化等各个领域的贡献和斗争。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=documentary%20film%20poster%20about%20Chinese%20women%27s%20history%2C%20cultural%20heritage%2C%20traditional%20society%2C%20educational%20content&image_size=square" alt="《中国女性史》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《中国女性史》</h3>
+                    <p class="text-gray-600 mb-4">导演：金铁木<br>年份：2021<br>时长：8集×45分钟<br>评分：8.8</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        该纪录片系统梳理了中国历史上女性的地位变迁，从远古时代到现代社会，展现了女性在不同历史时期的生活状况、社会角色和精神面貌，以及她们对中国历史发展的贡献。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=documentary%20film%20poster%20about%20feminist%20movement%2C%20modern%20history%2C%20social%20change%2C%20inspiring%20stories&image_size=square" alt="《她的故事：女性运动史》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《她的故事：女性运动史》</h3>
+                    <p class="text-gray-600 mb-4">导演：波莉·比德尔<br>年份：2020<br>时长：6集×50分钟<br>评分：9.3</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        该纪录片讲述了从19世纪末到21世纪初，全球女性运动的发展历程，通过珍贵的历史影像和亲历者讲述，展现了女性为争取平等权利进行的不懈斗争和取得的伟大成就。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多纪录片</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 现代影视作品 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">现代影视作品</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20drama%20movie%20poster%20about%20women%27s%20empowerment%2C%20contemporary%20setting%2C%20inspiring%20story%2C%20strong%20female%20characters&image_size=square" alt="《隐藏人物》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《隐藏人物》</h3>
+                    <p class="text-gray-600 mb-4">导演：西奥多·梅尔菲<br>主演：塔拉吉·P·汉森、奥克塔维亚·斯宾瑟<br>年份：2016<br>评分：8.8</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        该剧讲述了20世纪60年代，三位非裔美国女性数学家在NASA工作期间，凭借自己的才华和努力，为美国太空计划做出重要贡献的故事。剧中展现了女性在科技领域的能力和价值。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20biographical%20movie%20poster%20about%20Marie%20Curie%2C%20scientist%2C%20nobel%20prize%20winner%2C%20inspiring%20female%20figure%2C%20cinematic%20quality&image_size=square" alt="《居里夫人》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《居里夫人》</h3>
+                    <p class="text-gray-600 mb-4">导演：玛嘉·莎塔琵<br>主演：罗莎蒙德·派克、萨姆·赖利<br>年份：2019<br>评分：7.7</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        该电影讲述了玛丽·居里从一名波兰留学生成长为世界著名物理学家、化学家，首位获得诺贝尔奖的女性的故事。剧中展现了她在科学研究中的坚韧不拔和对知识的执着追求。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=modern%20tv%20series%20poster%20about%20women%20in%20workplace%2C%20professional%20setting%2C%20career%20growth%2C%20female%20empowerment%2C%20contemporary%20drama&image_size=square" alt="《傲骨贤妻》" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">《傲骨贤妻》</h3>
+                    <p class="text-gray-600 mb-4">导演：罗伯特·金<br>主演：朱丽安娜·玛格丽丝、乔西·查尔斯<br>年份：2009-2016<br>评分：9.1</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        该剧讲述了艾丽西亚·弗洛里克在丈夫因政治丑闻入狱后，重新回到律师行业，从一名家庭主妇成长为一名成功律师的故事。剧中展现了女性在职业领域的能力和魅力，以及她们面对挑战时的坚韧不拔。
+                    </p>
+                    <a href="#" class="text-primary hover:underline flex items-center">
+                        查看详情 <i class="fa fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多现代影视作品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 影视分类 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">影视分类</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-film"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">电影</h3>
+                    <p class="text-gray-600 mt-2">剧情片、传记片、史诗片</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-television"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">电视剧</h3>
+                    <p class="text-gray-600 mt-2">历史剧、现代剧、迷你剧</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-book"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">纪录片</h3>
+                    <p class="text-gray-600 mt-2">历史纪录、人物传记、社会议题</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-video-camera"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">短片</h3>
+                    <p class="text-gray-600 mt-2">剧情短片、动画短片、实验短片</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-4">订阅更新</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                订阅我们的邮件列表，获取最新的影视推荐、观影指南和活动信息。
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="请输入您的邮箱" class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button class="btn-primary whitespace-nowrap">订阅</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-book text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">女性历史知识库</span>
+                    </div>
+                    <p class="text-gray-400">
+                        为女性历史爱好者提供全面的知识资源，促进个人成长和历史认知。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="growth.html" class="text-gray-400 hover:text-primary transition-colors">女性成长</a></li>
+                        <li><a href="history.html" class="text-gray-400 hover:text-primary transition-colors">历史典籍</a></li>
+                        <li><a href="cultural.html" class="text-gray-400 hover:text-primary transition-colors">文物鉴赏</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">更多资源</h3>
+                    <ul class="space-y-2">
+                        <li><a href="media.html" class="text-primary hover:text-primary transition-colors">影视清单</a></li>
+                        <li><a href="interview.html" class="text-gray-400 hover:text-primary transition-colors">记录访谈</a></li>
+                        <li><a href="masterclass.html" class="text-gray-400 hover:text-primary transition-colors">大师课</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-primary transition-colors">实用工具</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">contact@womenhistory.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                        <li class="flex items-center"><i class="fa fa-map-marker mr-2"></i> <span class="text-gray-400">北京市海淀区</span></li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-zhihu text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-youtube-play text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 女性历史知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+                nav.classList.remove('bg-white');
+            } else {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+</html>

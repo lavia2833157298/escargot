@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>顶尖大师课 - 女性历史爱好者个人成长知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#EC4899',
+                        accent: '#F472B6',
+                        light: '#FDF2F8',
+                        dark: '#374151'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-all;
+            }
+            .btn-secondary {
+                @apply bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary/90 transition-all;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-book text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-dark">女性历史知识库</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary transition-colors">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary transition-colors">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-primary font-medium">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary transition-colors">实用工具</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-dark focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="index.html" class="text-dark hover:text-primary py-2 transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary py-2 transition-colors">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary py-2 transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary py-2 transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary py-2 transition-colors">影视清单</a>
+                <a href="interview.html" class="text-dark hover:text-primary py-2 transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-primary font-medium py-2 transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary py-2 transition-colors">实用工具</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-light">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">顶尖大师课</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                聆听知名学者和专家的精彩授课，从历史智慧中汲取营养，助力个人成长。
+                这里汇集了高质量的课程资源，为女性历史爱好者提供系统的学习体验。
+            </p>
+        </div>
+    </header>
+
+    <!-- 历史学术课 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">历史学术课</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=university%20professor%20teaching%20history%20class%2C%20academic%20setting%2C%20engaging%20lecture%2C%20students%20taking%20notes&image_size=square" alt="中国女性史专题" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">中国女性史专题</h3>
+                    <p class="text-gray-600 mb-4">讲师：李银河教授<br>课时：12课时<br>时长：每课时90分钟<br>评分：9.5</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本课程系统梳理了中国历史上女性的地位变迁，从远古时代到现代社会，探讨了女性在不同历史时期的生活状况、社会角色和精神面貌，以及她们对中国历史发展的贡献。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">历史研究</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">学术深度</span>
+                    </div>
+                    <a href="#" class="btn-primary block text-center">查看课程</a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=international%20historian%20giving%20lecture%2C%20global%20perspective%2C%20academic%20conference%20setting%2C%20professional%20presentation&image_size=square" alt="全球女性史视野" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">全球女性史视野</h3>
+                    <p class="text-gray-600 mb-4">讲师：玛丽·比尔德教授<br>课时：8课时<br>时长：每课时120分钟<br>评分：9.7</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本课程以全球视角讲述了女性在历史中的角色和地位变迁，通过比较不同文明中女性的经历，探讨了性别关系的演变、女性的反抗与斗争，以及女性在不同文化中的地位变化。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">全球视野</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">比较研究</span>
+                    </div>
+                    <a href="#" class="btn-primary block text-center">查看课程</a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=ancient%20history%20professor%20teaching%20class%2C%20classical%20studies%2C%20scholarly%20atmosphere%2C%20historical%20artifacts%20on%20display&image_size=square" alt="古代女性与权力" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">古代女性与权力</h3>
+                    <p class="text-gray-600 mb-4">讲师：钱乘旦教授<br>课时：10课时<br>时长：每课时100分钟<br>评分：9.3</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本课程探讨了古代社会中女性与权力的关系，分析了历史上杰出女性统治者的政治智慧和领导艺术，以及她们在男权社会中争取和维护权力的策略与方法。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">权力研究</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm"> leadership</span>
+                    </div>
+                    <a href="#" class="btn-primary block text-center">查看课程</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多历史学术课</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 女性研究工作坊 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">女性研究工作坊</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=interactive%20workshop%20on%20women%27s%20studies%2C%20small%20group%20discussion%2C%20collaborative%20learning%2C%20engaging%20activities&image_size=square" alt="女性主义理论与实践" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">女性主义理论与实践</h3>
+                    <p class="text-gray-600 mb-4">讲师：Judith Butler教授<br>课时：8课时<br>时长：每课时120分钟<br>评分：9.6</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本工作坊深入探讨了女性主义的核心理论和实践应用，通过案例分析和互动讨论，帮助学员理解女性主义的不同流派和观点，以及如何将理论转化为实际行动。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">理论研究</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">互动讨论</span>
+                    </div>
+                    <a href="#" class="btn-primary block text-center">查看工作坊</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=women%27s%20history%20workshop%2C%20hands-on%20activities%2C%20participants%20examining%20historical%20documents%2C%20collaborative%20research&image_size=square" alt="女性口述历史工作坊" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">女性口述历史工作坊</h3>
+                    <p class="text-gray-600 mb-4">讲师： oral history专家<br>课时：6课时<br>时长：每课时150分钟<br>评分：9.4</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本工作坊教授口述历史的方法和技巧，通过实践训练，帮助学员掌握如何收集、整理和分析女性的口述历史资料，以及如何通过口述历史展现女性的历史经验和声音。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">实践技能</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">资料收集</span>
+                    </div>
+                    <a href="#" class="btn-primary block text-center">查看工作坊</a>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=gender%20studies%20workshop%2C%20facilitator%20leading%20discussion%2C%20diverse%20participants%2C%20inclusive%20environment&image_size=square" alt="性别与历史研究方法" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">性别与历史研究方法</h3>
+                    <p class="text-gray-600 mb-4">讲师： Joan Scott教授<br>课时：10课时<br>时长：每课时90分钟<br>评分：9.2</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本工作坊介绍了性别视角在历史研究中的应用方法，包括如何从性别角度解读历史文献、如何分析历史中的性别关系、如何撰写性别史研究论文等，帮助学员掌握性别史研究的基本方法和技巧。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">研究方法</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">学术写作</span>
+                    </div>
+                    <a href="#" class="btn-primary block text-center">查看工作坊</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多女性研究工作坊</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 个人成长讲座 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">个人成长讲座</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=inspirational%20speaker%20giving%20lecture%2C%20women%27s%20empowerment%20talk%2C%20audience%20engaged%2C%20motivational%20setting&image_size=square" alt="从历史女性中汲取成长智慧" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">从历史女性中汲取成长智慧</h3>
+                    <p class="text-gray-600 mb-4">讲师：杨澜<br>课时：6课时<br>时长：每课时60分钟<br>评分：9.3</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本讲座通过分析历史上杰出女性的故事，探讨了她们的成长经历、成功经验和人生智慧，帮助学员从历史中汲取力量，应用到个人成长和职业发展中。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">个人成长</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">智慧启发</span>
+                    </div>
+                    <a href="#" class="btn-primary block text-center">查看讲座</a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20development%20seminar%2C%20career%20coaching%20session%2C%20women%20networking%20event%2C%20supportive%20environment&image_size=square" alt="女性领导力与职业发展" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">女性领导力与职业发展</h3>
+                    <p class="text-gray-600 mb-4">讲师：董明珠<br>课时：8课时<br>时长：每课时90分钟<br>评分：9.4</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本讲座分享了成功女性的领导力经验和职业发展策略，探讨了女性在职业发展中面临的挑战和机遇，以及如何发挥女性的优势，实现职业目标和个人价值。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">职业发展</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">领导力</span>
+                    </div>
+                    <a href="#" class="btn-primary block text-center">查看讲座</a>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=wellness%20workshop%20for%20women%2C%20mindfulness%20practice%2C%20self-care%20techniques%2C%20peaceful%20setting&image_size=square" alt="女性历史与自我认知" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">女性历史与自我认知</h3>
+                    <p class="text-gray-600 mb-4">讲师：张德芬<br>课时：10课时<br>时长：每课时60分钟<br>评分：9.1</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本讲座结合历史女性的故事和现代心理学理论，探讨了女性的自我认知和身份建构，帮助学员了解自己的优势和潜能，建立积极的自我形象和生活态度。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">自我认知</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">心理成长</span>
+                    </div>
+                    <a href="#" class="btn-primary block text-center">查看讲座</a>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多个人成长讲座</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 课程分类 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">课程分类</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">学术课程</h3>
+                    <p class="text-gray-600 mt-2">历史研究、理论探讨、学术深度</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">工作坊</h3>
+                    <p class="text-gray-600 mt-2">互动讨论、实践训练、技能提升</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">讲座</h3>
+                    <p class="text-gray-600 mt-2">智慧分享、经验传递、启发思考</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-laptop"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">在线课程</h3>
+                    <p class="text-gray-600 mt-2">灵活学习、随时随地、自主进度</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-4">订阅更新</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                订阅我们的邮件列表，获取最新的课程信息、学术讲座和学习资源。
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="请输入您的邮箱" class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button class="btn-primary whitespace-nowrap">订阅</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-book text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">女性历史知识库</span>
+                    </div>
+                    <p class="text-gray-400">
+                        为女性历史爱好者提供全面的知识资源，促进个人成长和历史认知。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="growth.html" class="text-gray-400 hover:text-primary transition-colors">女性成长</a></li>
+                        <li><a href="history.html" class="text-gray-400 hover:text-primary transition-colors">历史典籍</a></li>
+                        <li><a href="cultural.html" class="text-gray-400 hover:text-primary transition-colors">文物鉴赏</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">更多资源</h3>
+                    <ul class="space-y-2">
+                        <li><a href="media.html" class="text-gray-400 hover:text-primary transition-colors">影视清单</a></li>
+                        <li><a href="interview.html" class="text-gray-400 hover:text-primary transition-colors">记录访谈</a></li>
+                        <li><a href="masterclass.html" class="text-primary hover:text-primary transition-colors">大师课</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-primary transition-colors">实用工具</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">contact@womenhistory.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                        <li class="flex items-center"><i class="fa fa-map-marker mr-2"></i> <span class="text-gray-400">北京市海淀区</span></li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-zhihu text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-youtube-play text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 女性历史知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+                nav.classList.remove('bg-white');
+            } else {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+</html>

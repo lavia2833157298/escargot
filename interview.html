@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记录访谈库 - 女性历史爱好者个人成长知识库</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#8B5CF6',
+                        secondary: '#EC4899',
+                        accent: '#F472B6',
+                        light: '#FDF2F8',
+                        dark: '#374151'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-all;
+            }
+            .btn-secondary {
+                @apply bg-secondary text-white px-6 py-2 rounded-lg hover:bg-secondary/90 transition-all;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-book text-primary text-2xl"></i>
+                <span class="text-xl font-bold text-dark">女性历史知识库</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary transition-colors">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary transition-colors">影视清单</a>
+                <a href="interview.html" class="text-primary font-medium">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary transition-colors">实用工具</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-dark focus:outline-none">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="index.html" class="text-dark hover:text-primary py-2 transition-colors">首页</a>
+                <a href="growth.html" class="text-dark hover:text-primary py-2 transition-colors">女性成长</a>
+                <a href="history.html" class="text-dark hover:text-primary py-2 transition-colors">历史典籍</a>
+                <a href="cultural.html" class="text-dark hover:text-primary py-2 transition-colors">文物鉴赏</a>
+                <a href="media.html" class="text-dark hover:text-primary py-2 transition-colors">影视清单</a>
+                <a href="interview.html" class="text-primary font-medium py-2 transition-colors">记录访谈</a>
+                <a href="masterclass.html" class="text-dark hover:text-primary py-2 transition-colors">大师课</a>
+                <a href="tools.html" class="text-dark hover:text-primary py-2 transition-colors">实用工具</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题 -->
+    <header class="pt-32 pb-16 bg-gradient-to-br from-primary/10 to-light">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-dark mb-4">记录访谈库</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                聆听学者、历史亲历者和当代女性领袖的声音，从他们的故事中汲取智慧和力量。
+                这里汇集了丰富的访谈记录，为女性历史爱好者提供多元的视角和深刻的洞察。
+            </p>
+        </div>
+    </header>
+
+    <!-- 学者访谈 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">学者访谈</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20historian%20interview%2C%20female%20scholar%20discussing%20women%27s%20history%2C%20academic%20setting%2C%20intellectual%20conversation&image_size=square" alt="访谈：李银河教授" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">访谈：李银河教授</h3>
+                    <p class="text-gray-600 mb-4">受访者：李银河<br>访谈者：张悦<br>日期：2023年5月12日<br>时长：60分钟</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        本次访谈中，著名社会学家李银河教授分享了她对中国女性历史和性别研究的见解，探讨了女性在当代社会的地位变迁，以及女性主义理论的发展与实践。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i> 音频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-video-camera mr-2"></i> 视频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-file-text mr-2"></i> 文字稿
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20historian%20interview%2C%20male%20scholar%20discussing%20ancient%20Chinese%20women%27s%20history%2C%20academic%20setting%2C%20scholarly%20conversation&image_size=square" alt="访谈：钱乘旦教授" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">访谈：钱乘旦教授</h3>
+                    <p class="text-gray-600 mb-4">受访者：钱乘旦<br>访谈者：王芳<br>日期：2023年3月28日<br>时长：45分钟</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        著名历史学家钱乘旦教授在本次访谈中，从全球史视角探讨了女性在不同文明中的地位变迁，分析了女性历史研究的方法和意义，为我们理解女性历史提供了新的视角。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i> 音频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-video-camera mr-2"></i> 视频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-file-text mr-2"></i> 文字稿
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=international%20historian%20interview%2C%20female%20scholar%20discussing%20global%20women%27s%20history%2C%20cross-cultural%20perspective%2C%20professional%20setting&image_size=square" alt="访谈：玛丽·比尔德教授" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">访谈：玛丽·比尔德教授</h3>
+                    <p class="text-gray-600 mb-4">受访者：玛丽·比尔德<br>访谈者：陈鲁豫<br>日期：2022年11月5日<br>时长：75分钟</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        英国著名古典学家玛丽·比尔德教授在本次访谈中，分享了她对古罗马女性历史的研究成果，探讨了女性在古代社会的角色和地位，以及性别视角在历史研究中的重要性。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i> 音频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-video-camera mr-2"></i> 视频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-file-text mr-2"></i> 文字稿
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多学者访谈</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 口述历史 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">口述历史</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=oral%20history%20interview%2C%20elderly%20Chinese%20woman%20sharing%20her%20life%20story%2C%20warm%20and%20intimate%20setting%2C%20generational%20wisdom&image_size=square" alt="口述历史：王奶奶的故事" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">口述历史：王奶奶的故事</h3>
+                    <p class="text-gray-600 mb-4">讲述者：王秀英（86岁）<br>记录者：李婷<br>日期：2023年8月15日<br>时长：90分钟</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        王奶奶出生于1937年，经历了抗日战争、解放战争、新中国成立和改革开放等重要历史时期。她分享了自己作为女性在不同时代的生活经历，包括婚姻、家庭、工作和社会变迁。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i> 音频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-file-text mr-2"></i> 文字稿
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=oral%20history%20interview%2C%20elderly%20woman%20veteran%20sharing%20her%20wartime%20experiences%2C%20respectful%20setting%2C%20historical%20testimony&image_size=square" alt="口述历史：张阿姨的抗美援朝经历" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">口述历史：张阿姨的抗美援朝经历</h3>
+                    <p class="text-gray-600 mb-4">讲述者：张淑兰（92岁）<br>记录者：王军<br>日期：2023年4月28日<br>时长：120分钟</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        张阿姨是一位抗美援朝女战士，她讲述了自己作为志愿军护士在战场上的经历，包括救治伤员、应对敌机轰炸、与战友们的深厚情谊，以及战争对她人生的影响。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i> 音频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-file-text mr-2"></i> 文字稿
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=oral%20history%20interview%2C%20retired%20female%20scientist%20sharing%20her%20career%20story%2C%20professional%20setting%2C%20inspiring%20narrative&image_size=square" alt="口述历史：李教授的科研之路" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">口述历史：李教授的科研之路</h3>
+                    <p class="text-gray-600 mb-4">讲述者：李敏（78岁）<br>记录者：刘芳<br>日期：2022年12月3日<br>时长：100分钟</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        李教授是新中国培养的第一批女科学家，她讲述了自己从农村女孩成长为著名科学家的历程，包括求学经历、科研工作、克服性别歧视的挑战，以及对年轻女性科技工作者的建议。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i> 音频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-file-text mr-2"></i> 文字稿
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多口述历史</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 当代女性领袖 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">当代女性领袖</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=contemporary%20female%20business%20leader%20interview%2C%20successful%20Chinese%20woman%20CEO%2C%20professional%20setting%2C%20confident%20and%20inspiring&image_size=square" alt="访谈：董明珠女士" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">访谈：董明珠女士</h3>
+                    <p class="text-gray-600 mb-4">受访者：董明珠<br>访谈者：杨澜<br>日期：2023年9月8日<br>时长：75分钟</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        格力电器董事长董明珠在本次访谈中，分享了她的创业历程、管理理念，以及作为女性企业家的挑战与机遇。她讲述了如何在男性主导的商业世界中建立自己的影响力，以及对女性职业发展的见解。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i> 音频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-video-camera mr-2"></i> 视频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-file-text mr-2"></i> 文字稿
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=contemporary%20female%20political%20leader%20interview%2C%20influential%20woman%20in%20government%2C%20official%20setting%2C%20stateswoman%20presence&image_size=square" alt="访谈：吴仪女士" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">访谈：吴仪女士</h3>
+                    <p class="text-gray-600 mb-4">受访者：吴仪<br>访谈者：白岩松<br>日期：2022年10月15日<br>时长：90分钟</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        前国务院副总理吴仪在本次访谈中，回顾了自己的政治生涯，分享了作为女性领导人的工作经历和心得体会，探讨了女性在公共服务领域的优势与挑战，以及对年轻女性参与政治的鼓励。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i> 音频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-video-camera mr-2"></i> 视频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-file-text mr-2"></i> 文字稿
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-light p-6 rounded-lg card-hover">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=contemporary%20female%20artist%20interview%2C%20famous%20Chinese%20woman%20painter%2C%20creative%20setting%2C%20artistic%20expression&image_size=square" alt="访谈：杨丽萍女士" class="rounded-lg mb-4 w-full">
+                    <h3 class="text-xl font-semibold mb-2 text-dark">访谈：杨丽萍女士</h3>
+                    <p class="text-gray-600 mb-4">受访者：杨丽萍<br>访谈者：鲁豫<br>日期：2023年7月20日<br>时长：80分钟</p>
+                    <p class="text-gray-600 mb-4 line-clamp-3">
+                        著名舞蹈家杨丽萍在本次访谈中，分享了自己的艺术创作历程，讲述了如何将民族元素与现代舞蹈相结合，以及作为女性艺术家的创作心得和生活哲学。她还探讨了艺术与女性身份的关系。
+                    </p>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-play-circle mr-2"></i> 音频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-video-camera mr-2"></i> 视频
+                        </a>
+                        <a href="#" class="text-primary hover:underline flex items-center">
+                            <i class="fa fa-file-text mr-2"></i> 文字稿
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="btn-primary">查看更多当代女性领袖</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 访谈分类 -->
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-dark mb-12">访谈分类</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">学者专家</h3>
+                    <p class="text-gray-600 mt-2">历史学家、社会学家、文化学者</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-history"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">历史亲历者</h3>
+                    <p class="text-gray-600 mt-2">战争幸存者、时代见证者、普通民众</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">行业领袖</h3>
+                    <p class="text-gray-600 mt-2">企业家、政治家、科学家、艺术家</p>
+                </a>
+                <a href="#" class="bg-white p-6 rounded-lg text-center card-hover">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-users"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-dark">社会活动家</h3>
+                    <p class="text-gray-600 mt-2">女权主义者、公益领袖、社区组织者</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 订阅区域 -->
+    <section class="py-16 bg-primary/10">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-dark mb-4">订阅更新</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                订阅我们的邮件列表，获取最新的访谈内容、口述历史和女性领袖故事。
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="请输入您的邮箱" class="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button class="btn-primary whitespace-nowrap">订阅</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-book text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">女性历史知识库</span>
+                    </div>
+                    <p class="text-gray-400">
+                        为女性历史爱好者提供全面的知识资源，促进个人成长和历史认知。
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="growth.html" class="text-gray-400 hover:text-primary transition-colors">女性成长</a></li>
+                        <li><a href="history.html" class="text-gray-400 hover:text-primary transition-colors">历史典籍</a></li>
+                        <li><a href="cultural.html" class="text-gray-400 hover:text-primary transition-colors">文物鉴赏</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">更多资源</h3>
+                    <ul class="space-y-2">
+                        <li><a href="media.html" class="text-gray-400 hover:text-primary transition-colors">影视清单</a></li>
+                        <li><a href="interview.html" class="text-primary hover:text-primary transition-colors">记录访谈</a></li>
+                        <li><a href="masterclass.html" class="text-gray-400 hover:text-primary transition-colors">大师课</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-primary transition-colors">实用工具</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><i class="fa fa-envelope mr-2"></i> <span class="text-gray-400">contact@womenhistory.com</span></li>
+                        <li class="flex items-center"><i class="fa fa-phone mr-2"></i> <span class="text-gray-400">+86 123 4567 8910</span></li>
+                        <li class="flex items-center"><i class="fa fa-map-marker mr-2"></i> <span class="text-gray-400">北京市海淀区</span></li>
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-zhihu text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fa fa-youtube-play text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2026 女性历史知识库. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-white/95', 'backdrop-blur-sm');
+                nav.classList.remove('bg-white');
+            } else {
+                nav.classList.add('bg-white');
+                nav.classList.remove('bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body>
+</html>
